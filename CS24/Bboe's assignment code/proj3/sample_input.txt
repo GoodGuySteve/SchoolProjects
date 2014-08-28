@@ -1,0 +1,11 @@
+# Priorities
+01 Cough
+05 Head Ache
+08 Bleeding
+10 Decompression Sickness
+# Doctors
+Dr. Something Orother
+# Patient Arrivals
+09:11 "Vincent van Gogh" "Bleeding" 150
+09:30 "Phineas Gage" "Head Ache" 65
+09:45 "Neil Armstrong" "Decompression Sickness" 360

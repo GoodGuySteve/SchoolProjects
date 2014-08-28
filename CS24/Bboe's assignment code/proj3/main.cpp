@@ -1,0 +1,3 @@
+/* This is the only file you will submit. You are free to use whatever STANDARD
+   libraries you want to complete this assignment as well as the MaxHeap
+   provided in heap.h. This file is your oyster. */
