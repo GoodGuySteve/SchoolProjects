@@ -1,0 +1,52 @@
+#___________________________________________________
+#               Test multiply function
+#___________________________________________________
+                define  x   20  #   int x;
+                define  y   21  #   int y;
+                define  xXy 22  #   int xXy;
+               
+                read    x
+                read    y
+                push    y
+                push    x
+                call    multiply
+                pop     xXy
+                write   xXy
+                stop
+
+#___________________________________________________
+#              Computes mX * mY.
+# @param mX - the 1st operand.
+# @param mY - the 2nd operand, which must be >= 0..
+# @returns mX * mY.
+#___________________________________________________
+
+               # local variables
+               define   mX      50  #   int mX;
+               define   mY      51  #   int mY;
+               define   product 52  #   int product;
+
+multiply       pop      mX          #  X = mX;
+               pop      mY          #  y = mY;
+               set      0
+               store    product    # product = 0;
+               load     mY
+
+               # if ( mY != 0 ) goto AddX
+mIdone         zero     addX        
+
+               # exit loop: return product;
+               push    product
+               return
+
+               # loop body: product += mX;
+addX           load      product 
+               add       mX
+               store     product
+
+               #  mY--;
+               set         -1
+               add         mY 
+               store       mY
+
+               goto      mIdone

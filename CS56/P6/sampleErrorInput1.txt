@@ -1,0 +1,12 @@
+        define              # too few operands
+        define oneOperand   # too few operands
+        define 17           # not an identifier
+        define SYMBOL 17 18 # too many operands
+        define TYMBOL 17 xx # too many operands
+        define 17 UYMBOL    # 17 not an identifier
+xyz     yzx                 # invalid opcode
+label   add 20              # valid 
+label   store 16            # duplicate label
+        17x                 # neither an identifier nor an opcode
+        set NotDefined      # operand symbol is not defined
+        goto UndefinedLabel # undefined label	

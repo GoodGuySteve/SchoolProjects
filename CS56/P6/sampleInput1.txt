@@ -1,0 +1,62 @@
+            # GVM data memory addresses
+            define DECREMENT       20
+            define ROW_COUNTER     21
+            define COLUMN_COUNTER  22
+            define DELTA           23
+
+            # GVM program constants
+            define N            17
+            define DELTA_VALUE  40
+
+            set -1
+            store DECREMENT
+            set DELTA_VALUE
+            store DELTA
+            store WIDTH
+            store HEIGHT
+            set N
+            store ROW_COUNTER
+            store COLUMN_COUNTER
+            
+ FillShape  load RED
+            zero  IsRed
+
+                # is black
+                 set 255   # make it red
+                 store RED
+                 setcolor
+                 filloval
+                 goto IfAdvanceColumn
+            
+IsRed            set 0   # make it black
+                 store RED
+                 setcolor
+                 fillrect
+                
+IfAdvanceColumn load COLUMN_COUNTER
+                add DECREMENT
+                store COLUMN_COUNTER
+                zero AdvanceColumn
+                
+               # Finished columns. Advance row?
+               load ROW_COUNTER
+               add DECREMENT
+               store ROW_COUNTER
+               zero AdvanceRow
+              # Finished rows.
+              stop
+            
+AdvanceColumn load X
+              add DELTA
+              store X
+              goto FillShape
+            
+AdvanceRow load Y
+           add DELTA
+           store Y
+           # reset column
+             set 0
+             store X
+             set N
+             store COLUMN_COUNTER
+             goto FillShape

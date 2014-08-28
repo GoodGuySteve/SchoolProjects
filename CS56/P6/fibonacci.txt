@@ -1,0 +1,70 @@
+#___________________________________________________
+#               Test Fibonacci function
+# @author Austin Smith
+# @author Steven Cabral
+#___________________________________________________
+                define  xMax   20   #   int x;
+				define result  21   #   int result;
+               
+                read    xMax
+                push    xMax
+                call    fibonacci
+                pop     result
+                write   result
+                stop
+				
+#___________________________________________________
+#              Computes the xMax'th fibonacci number.
+# @param xMax - the fibonacci number to calculate, which must be >= 0
+# @returns the xMax'th fibonacci number
+#___________________________________________________
+
+               # local variables
+               define   prev1      50  #   int prev1;
+               define   prev2      51  #   int prev2;
+               define   fibResult  52  #   int fibResult;
+
+fibonacci 	pop xMax
+
+			set -1
+			add xMax
+			zero secondZero
+			set 1	#if xMax == 1
+			push ACC
+			return
+
+secondZero  set -2
+			add xMax
+			zero notBase
+			set 1	#if xMax == 2
+			push ACC
+			return
+			
+			#if not base case
+notBase		set -1
+			add xMax
+			store prev1
+			push xMax
+			push prev1
+			call fibonacci
+			
+			pop prev1
+			pop xMax
+			set -2
+			add xMax
+			store prev2
+			push xMax
+			push prev1
+			push prev2
+			call fibonacci
+			
+			pop prev2
+			pop prev1
+			pop xMax
+			
+			load prev1
+			add prev2
+			store fibResult
+			push fibResult
+			return
+			
