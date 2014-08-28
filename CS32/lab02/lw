@@ -1,0 +1,33 @@
+#!/bin/sh
+#Displays writable files in specified directory
+#Steven Cabral, Austin Smith April 18, 2014
+
+if [ -z $1 ];
+then
+	echo "Usage: $0 DirectoryName"
+	exit 1
+elif [[ ! -a $1 ]];
+then
+	echo "there is no directory named $1"
+	exit 2
+elif [[ ! -r $1 ]];
+then
+	echo "you do not have permission to read $1"
+	exit 3
+elif [[ ! -d $1 ]];
+then
+	echo "$1 is not a directory"
+	exit 4
+fi
+
+cd $1
+echo "items in `pwd` that are writable by $USER:"
+
+for f in *
+do
+   if [ -w $f ];
+   then 
+      echo "   `file $f`"
+      exit 0
+   fi
+done
