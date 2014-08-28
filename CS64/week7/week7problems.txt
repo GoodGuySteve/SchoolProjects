@@ -1,0 +1,74 @@
+Week 7 - Boolean algebra and Digital circuits
+Due Wednesday, May 28st, 11:59pm
+
+1. For each problem use boolean algebra to simplify the equation.
+SHOW YOUR WORK! The first step has been done for you to show how.
+Please write your answers sorted in the order given as only sum of products.
+
+Ex. f(Z,Y,X) = !ZY!X + ZY!X + !YX
+= (!Z + Z)Y!X + !YX
+= Y!X + !YX
+Ex) !YX + Y!X
+
+1a. f(A,B,C) = !A!B!C + A!B!C + !ABC + !AB!C + ABC
+= (!A + A)!B!C + !AB(!C + C) + ABC
+= !B!C + !AB + ABC
+= !B!C + !AB + !ABC + ABC
+= !B!C + !AB + (!A + A)BC
+= !B!C + !AB + BC
+1a) !AB + !B!C + BC
+
+1b. f(A,B,C,D) = (AD + !AC)(!B(C + B!D))
+= (AD + !AC)(!BC + !BB!D)
+= (AD + !AC)(!BC)
+= A!BCD + !A!BCC
+= A!BCD + !A!BC
+= A!BCD + !A!BC + !A!BCD
+= (!A + A)!BCD + !A!BC
+= !BCD + !A!BC
+1b) !A!BC + !BCD
+
+2.  The 4-input MUX can be constructed entirely with 2-input MUXes.
+I will start you out - put inputs A and B into one MUX and inputs C and D 
+into another MUX.  This is the first stage of the solution.
+Then decide how to reconcile the two results from those MUXes.
+Look hard at the logic for the 2-input MUX vs the 4-input MUX.
+
+How many 2-input MUXes are needed to create a 4-input MUX?
+2a) 3
+
+How select lines are needed?
+2b) 2
+
+Draw the circuit and include them in your submission as "week7mux.jpg"
+
+3.  Now think of a MUX that has 2^n inputs.  All of your answers will
+have the variable n in them.
+
+How many select bits are there?
+3a) n
+
+If it is implemented with 2-input MUXes, how many MUXes are there in 
+the first stage?
+3b) 2^n/2
+
+Second stage?
+3c) 2^n/4
+
+How many stages of 2-input MUXes are there?
+3d) n
+
+4.  Draw out the logic for a 1-bit ALU that performs the following
+operations with the following opcodes:
+0 -> bitwise NOT of input B
+1 -> negation of input B
+2 -> ADD
+3 -> SUB
+
+How many bits are needed to encode the opcodes?
+4a) 2
+
+How many output bits are there?
+4b) 2
+
+Include the drawing in your submission as "week7alu.jpg"

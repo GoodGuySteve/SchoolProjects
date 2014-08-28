@@ -1,0 +1,199 @@
+Week 6 problems:
+
+Remember to solve these individually, working with your "buddy" only when
+you get stuck, and seeking help from the TA only when you are both stuck.
+You may NOT use any calculators.  Make sure you are on your own computer,
+editing your own file.
+
+This is part of your assignment for the week, not just for the day, so it is
+expected that you may not finish during this lab time.
+
+For each problem, make sure you write your answer exactly on the line with
+the problem number (i.e. 1a) that follows the question.  Whitespace does
+not matter, but order does.
+
+Each of the problems has the same process.
+1: Identify the inputs and outputs
+ - this will be given for you to make sure we all name them the same
+2: Write the truth table
+ - we will give you the table to fill in.  Make sure you do not
+	reorder the rows.  
+3: Unoptimized Sum of products.  Make sure you format the answers correctly.
+ - Order the inputs by the ORDER AT THE TOP OF THE TRUTH TABLE.
+ - Order the terms by the order of the rows in the truth table.
+  - the order is from top to bottom in the truth table
+  - AND is not shown (place next to each other), OR is '+', and NOT is '!'
+  - whitespace does not matter.
+  - place your entire answer on one line - wrap around if necessary
+
+ex. B A | C
+    _______
+    0 0 | 0
+    0 1 | 1
+    1 0 | 1
+    1 1 | 0
+
+C = !BA + A!B
+
+4: K-map drawn on a separate piece of paper
+5: Optimized sum of products, terms in HEADING order
+  - assume that '!A' comes before A, but A comes before !B.
+  - ordering is: !A, A, !B, B, !C, C, !D, D, etc.
+
+1.  In class, we went through the example of splitting a binary addition into
+single bit additions.  This is simplest in terms of design time, but it does not
+lead to the fastest implementation.  Instead, let's create a 2-bit adder as 
+the smallest unit.  In this case, there are four bits of input from the two 
+numbers, in addition to the single input carry.  There are two result bits
+and a single output carry.  A0 is the least significant bit (the one on the right).
+inputs: A1, A0, B1, B0, Cin  outputs: R0, R1, Cout
+For example, if we are performing an addition, it looks like this:
+
+     A1 A0 Cin
+   + B1 B0   
+     _____
+Cout R1 R0
+  
+    Cin A1 A0 B1 B0 | Cout R1 R0
+    ____________________________
+1a) 0   0  0  0  0  | 0    0  0
+1b) 0   0  0  0  1  | 0    0  1 
+1c) 0   0  0  1  0  | 0    1  0 
+1d) 0   0  0  1  1  | 0    1  1
+1e) 0   0  1  0  0  | 0    0  1
+1f) 0   0  1  0  1  | 0    1  0
+1g) 0   0  1  1  0  | 0    1  1
+1h) 0   0  1  1  1  | 1    0  0
+1i) 0   1  0  0  0  | 0    1  0
+1j) 0   1  0  0  1  | 0    1  1 
+1k) 0   1  0  1  0  | 1    0  0
+1l) 0   1  0  1  1  | 1    0  1
+1m) 0   1  1  0  0  | 0    1  1
+1n) 0   1  1  0  1  | 1    0  0
+1o) 0   1  1  1  0  | 1    0  1
+1p) 0   1  1  1  1  | 1    1  0
+1q) 1   0  0  0  0  | 0    0  1
+1r) 1   0  0  0  1  | 0    1  0
+1s) 1   0  0  1  0  | 0    1  1
+1t) 1   0  0  1  1  | 1    0  0
+1u) 1   0  1  0  0  | 0    1  0
+1v) 1   0  1  0  1  | 0    1  1
+1w) 1   0  1  1  0  | 1    0  0
+1x) 1   0  1  1  1  | 1    0  1
+1y) 1   1  0  0  0  | 0    1  1
+1z) 1   1  0  0  1  | 1    0  0
+1aa)1   1  0  1  0  | 1    0  1
+1ab)1   1  0  1  1  | 1    1  0
+1ac)1   1  1  0  0  | 1    0  0
+1ad)1   1  1  0  1  | 1    0  1
+1ae)1   1  1  1  0  | 1    1  0
+1af)1   1  1  1  1  | 1    1  1
+
+Unoptimized Sum of products equations:
+1ba) Cout = !Cin!A1A0B1B0 + !CinA1!A0B1!B0 + !CinA1!A0B1B0 + !CinA1A0!B1B0 + !CinA1A0B1!B0 + !CinA1A0B1B0 + Cin!A1!A0B1B0 + Cin!A1A0B1!B0 + Cin!A1A0B1B0 + CinA1!A0!B1B0 + CinA1!A0B1!B0 + CinA1!A0B1B0 + CinA1A0!B1!B0 + CinA1A0!B1B0 + CinA1A0B1!B0 + CinA1A0B1B0
+1bb) R1 = !Cin!A1!A0B1!B0 + !Cin!A1!A0B1B0 + !Cin!A1A0!B1B0 + !Cin!A1A0B1!B0 + !CinA1!A0!B1!B0 + !CinA1!A0!B1B0 + !CinA1A0!B1!B0 + !CinA1A0B1B0 + Cin!A1!A0!B1B0 + Cin!A1!A0B1!B0 + Cin!A1A0!B1!B0 + Cin!A1A0!B1B0 + CinA1!A0!B1!B0 + CinA1!A0B1B0 + CinA1A0B1!B0 + CinA1A0B1B0
+1bc) R0 = !Cin!A1!A0!B1B0 + !Cin!A1!A0B1B0 + !Cin!A1A0!B1!B0 + !Cin!A1A0B1!B0 + !CinA1!A0!B1B0 + !CinA1!A0B1B0 + !CinA1A0!B1!B0 + !CinA1A0B1!B0 + Cin!A1!A0!B1!B0 + Cin!A1!A0B1!B0 + Cin!A1A0!B1B0 + Cin!A1A0B1B0 + CinA1!A0!B1!B0 + CinA1!A0B1!B0 + CinA1A0!B1B0 + CinA1A0B1B0
+
+This problem is too large for a K-map.  You are finished.
+
+2. In this problem, you are to figure out the logic of the overflow bit.
+Remember that the overflow bit is 1 if the result of the output is out of
+range for the signed representation of the number.  It turns out that for this
+to be true, the sign of the result needs to be incorrect.  First, write down
+a bunch of examples that differ in the upper-most bits and figure out the 
+patter.  You can determine the value of the overflow bit just by looking at 
+the uppermost bits of the inputs and output.
+Inputs: R, A, B  Output: V
+   R A B | V
+   _________
+2a)0 0 0 | 0
+2b)0 0 1 | 0
+2c)0 1 0 | 0
+2d)0 1 1 | 1
+2e)1 0 0 | 1
+2f)1 0 1 | 0
+2g)1 1 0 | 0
+2h)1 1 1 | 0
+
+Unoptimized sum of products equation:
+2ba) V = !RAB + R!A!B
+
+Now write the K-map on a separate piece of paper (that you will turn in at 
+lab next week or in class)
+
+Optimized sum of products equation:
+2ca) V = !RAB + R!A!B
+
+3.  Given this truth table, do steps 2-4.
+  A B C | O
+  _________
+  0 0 0 | 0
+  0 0 1 | 0
+  0 1 0 | 1
+  0 1 1 | 1
+  1 0 0 | 1
+  1 0 1 | 1
+  1 1 0 | 0
+  1 1 1 | 0
+
+
+Unoptimized Sum of Products equation
+3b) O = !AB!C + !ABC + A!B!C + A!BC
+
+Draw the K-map and simplify
+Optimized Sum of Products equation
+3c) O = !AB + A!B
+
+4.  Given this truth table, do steps 2-4.
+  A B C D | O
+  ___________
+  0 0 0 0 | 1
+  0 0 0 1 | 1
+  0 0 1 0 | 1
+  0 0 1 1 | 0
+  0 1 0 0 | 1
+  0 1 0 1 | 1
+  0 1 1 0 | 0
+  0 1 1 1 | 0
+  1 0 0 0 | 1
+  1 0 0 1 | 0
+  1 0 1 0 | 1
+  1 0 1 1 | 0
+  1 1 0 0 | 0
+  1 1 0 1 | 0
+  1 1 1 0 | 0
+  1 1 1 1 | 0
+
+Unoptimized Sum of Products equation
+4b) O = !A!B!C!D + !A!B!CD + !A!BC!D + !AB!C!D + !AB!CD + A!B!C!D + A!BC!D
+
+Draw the K-map and simplify
+Optimized Sum of Products equation
+4c) O = !A!C + !B!D
+
+5.  Given this truth table, do steps 2-4.
+  A B C D | O
+  ___________
+  0 0 0 0 | 0
+  0 0 0 1 | 0
+  0 0 1 0 | 0
+  0 0 1 1 | 0
+  0 1 0 0 | 1
+  0 1 0 1 | 0
+  0 1 1 0 | 1
+  0 1 1 1 | 0
+  1 0 0 0 | 0
+  1 0 0 1 | 0
+  1 0 1 0 | 0
+  1 0 1 1 | 1
+  1 1 0 0 | 1
+  1 1 0 1 | 0
+  1 1 1 0 | 1
+  1 1 1 1 | 1
+
+Unoptimized Sum of Products equation
+5b) O = !AB!C!D + !ABC!D + A!BCD + AB!C!D + ABC!D + ABCD
+
+Draw the K-map and simplify
+Optimized Sum of Products equation
+5c) O = ACD + B!D
