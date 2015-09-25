@@ -1,0 +1,8 @@
+
+This program generates a matrix of dimensions 32 x 32 and runs the powermethod
+on it for 10 iterations. If you are using the input matrix from the given example,
+the result should be 6
+
+6.987916 0.003667
+28.093687 0.000123
+32.000000 0.000128

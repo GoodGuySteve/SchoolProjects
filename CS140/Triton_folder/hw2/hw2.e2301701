@@ -1,0 +1,8 @@
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not find an executable:
+
+Executable: assn2
+Node: tscc-0-60.sdsc.edu
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------

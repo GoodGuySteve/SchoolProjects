@@ -1,0 +1,36 @@
+
+This program generates a matrix of dimensions 8 x 8 and runs the powermethod
+on it for 1000 iterations. If you are using the input matrix from the given example,
+the result should be 6
+
+Proccessor 1 reporting in
+Proccessor 2 reporting in
+Proccessor 3 reporting in
+Proccessor 0 reporting in
+Member 0 of proccess 0 is 0.000000
+Member 1 of proccess 0 is 1.000000
+Member 2 of proccess 0 is 2.000000
+Member 3 of proccess 0 is 3.000000
+Total vector assembled: (should be length 20)
+0.000000
+0.000000
+0.000000
+0.000000
+0.000000
+1.000000
+2.000000
+3.000000
+4.000000
+5.000000
+2.000000
+4.000000
+6.000000
+8.000000
+10.000000
+3.000000
+6.000000
+9.000000
+12.000000
+15.000000
+Spectral radius is : -0.010000
+Time in seconds : 0.151993

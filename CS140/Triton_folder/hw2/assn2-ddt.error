@@ -1,0 +1,2 @@
+ModuleCmd_Switch.c(172):ERROR:152: Module 'pgi' is currently not loaded
+/var/spool/torque/mom_priv/jobs/2301276.tscc-mgr.local.SC: line 35: /opt/openmpi/intel/mx/bin/mpirun: No such file or directory

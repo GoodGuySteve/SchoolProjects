@@ -1,0 +1,7 @@
+
+This program generates a matrix of dimensions 4096 x 4096 and runs the powermethod
+on it for 1000 iterations. If you are using the input matrix from the given example,
+the result should be 6
+
+Spectral radius is : 11223.919216
+Time in seconds : 3.596959

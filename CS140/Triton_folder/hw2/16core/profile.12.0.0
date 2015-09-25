@@ -1,0 +1,20 @@
+14 templated_functions_MULTI_TIME
+# Name Calls Subrs Excl Incl ProfileCalls # <metadata><attribute><name>Metric Name</name><value>TIME</value></attribute><attribute><name>Starting Timestamp</name><value>1421721536628160</value></attribute><attribute><name>Timestamp</name><value>1421721536628324</value></attribute><attribute><name>pid</name><value>51457</value></attribute></metadata>
+".TAU application" 1 1 8870 1690046 0 GROUP="TAU_USER" 
+"main [{/home/ucsb-train24/hw2/powermethod.c} {13,0}]" 1 7 1036 1681176 0 GROUP="TAU_DEFAULT" 
+"MPI_Init()  " 1 0 1112104 1112104 0 GROUP="MPI" 
+"MPI_Comm_rank()  " 3 0 1 1 0 GROUP="MPI" 
+"MPI_Comm_size()  " 3 0 3 3 0 GROUP="MPI" 
+"generatematrix [{/home/ucsb-train24/hw2/functions.c} {19,0}]" 1 2 200603 200604 0 GROUP="TAU_DEFAULT" 
+"generatevec [{/home/ucsb-train24/hw2/functions.c} {40,0}]" 1 0 68 68 0 GROUP="TAU_DEFAULT" 
+"powerMethod [{/home/ucsb-train24/hw2/functions.c} {49,0}]" 1 53 1017 355269 0 GROUP="TAU_DEFAULT" 
+"norm2 [{/home/ucsb-train24/hw2/functions.c} {106,0}]" 11 0 396 396 0 GROUP="TAU_DEFAULT" 
+"MPI_Bcast()  " 10 0 23296 23296 0 GROUP="MPI" 
+"matVec [{/home/ucsb-train24/hw2/functions.c} {115,0}]" 10 0 317700 317700 0 GROUP="TAU_DEFAULT" 
+"MPI_Gather()  " 10 0 11335 11335 0 GROUP="MPI" 
+"MPI_Barrier()  " 10 0 1523 1523 0 GROUP="MPI" 
+"MPI_Finalize()  " 1 0 12094 12094 0 GROUP="MPI" 
+0 aggregates
+1 userevents
+# eventname numevents max min mean sumsqr
+"Message size for broadcast" 10 80000 80000 80000 64000000000

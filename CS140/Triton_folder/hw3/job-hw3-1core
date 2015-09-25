@@ -1,0 +1,43 @@
+#!/bin/sh
+############################################################################## 
+# First we have some directives to the queueing system. Must be in 
+# the first block of comment lines. 
+#
+##PBS -q largemem
+#PBS -l nodes=1:ppn=4
+#PBS -l walltime=00:10:00
+##PBS -o outFile
+#PBS -V
+#PBS -N hw3
+# 
+# Make sure that we are in the same subdirectory as where the qsub command 
+# is issued. 
+# 
+cd $PBS_O_WORKDIR 
+#
+#  Determine the nodes, num process, etc.
+#  cat $PBS_NODEFILE > nodes
+#  oddly,, this version puts all nodes on one line...
+#  mpirun wants separate lines though.
+while read machine
+do
+echo $machine
+done < $PBS_NODEFILE > nodes
+# Get number of nodes allocated
+NO_OF_NODES=`cat $PBS_NODEFILE | egrep -v '^#'\|'^$' | wc -l | awk '{print $1}'`
+NODE_LIST=`cat $PBS_NODEFILE`
+NUM_CORES=`cat $PBS_NODEFILE | wc -w`
+#
+# Our list of nodes...                      
+echo $NODE_LIST
+# 
+# 
+# Run the executable. *DO NOT PUT* a '&' at the end - it will not 
+# work. 
+#
+ulimit -s unlimited
+# Call MPI here:
+mpirun -v -machinefile $PBS_NODEFILE -np 1 assn3 r 64 1000 604800 < input.txt
+# End of script file
+# 
+############################################################################### 
