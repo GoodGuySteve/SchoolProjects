@@ -1,0 +1,85 @@
+
+This is the answer file for homework 2, performance.  Make sure you 
+are looking at the separate question file - not all of the questions
+are contained in this file.
+
+1.  Look at problem 1 in the questions document.  Then calculate the 
+following statistics.  Determine the effective CPI (Cycles per instruction), 
+MIPS (Millions of Instructions per Second) rate, and execution time for 
+this program.  Express each answer with as 4 digits.  For CPI and MIPS, 
+do not use scientific notation.  For execution time, use scientific notation.
+For example, if the CPI was calculated to be 9.8448902853, then you would 
+answer:
+1ax) CPI = 9.845
+And an example of the execution time format is:
+1cx) Exec Time = 1.254 x 10 ^ -2
+
+1a) CPI = 2.670
+1b) MIPS = 14.98
+1c) Exec Time = 6.675 x 10 ^ -3
+
+2.  Now look at the table for execution times (in ms) for systems 
+A, B, and C, for the programs v, w, x, y, and z.
+
+First, you are going to normalize all of the execution times to C,
+a common calculation to make comparisons more clear.
+You are doing the work to fill in the three columns labeled
+"Execution Time Normalized to C".  Each box will contain a separate
+answer.  Then transfer those answers to the lines below.  For each
+answer, include four digits (excluding a leading 0).  You do not need
+to move the decimal point and express in 10^x format.  For example,
+one answer might be:
+2xa) D.x. = 3.000
+or another might be:
+2xb) D.x. = 0.4582
+yet another could be:
+2xc) D.x. = 3.489
+
+Execution times normalized to C:
+2av) A.v. = 0.7143
+2aw) A.w. = 0.5000
+2ax) A.x. = 1.467
+2ay) A.y. = 0.7843
+2az) A.z. = 0.8333
+2bv) B.v. = 0.8571
+2bw) B.w. = 0.6000
+2bx) B.x. = 1.867
+2by) B.y. = 1.176
+2bz) B.z. = 0.4167
+2cv) C.v. = 1.000
+2cw) C.w. = 1.000
+2cx) C.x. = 1.000
+2cy) C.y. = 1.000
+2cz) C.z. = 1.000
+
+Now report, for each benchmark, which is the fastest computer system,
+A, B, or C?
+2fv) v's fastest is A
+2fw) w's fastest is A
+2fx) x's fastest is C
+2fy) y's fastest is A
+2fz) z's fastest is B
+
+Now, what are the weighted averages of the three systems?
+2wa) A's weighted average is 862.5
+2wb) B's weighted average is 520.0
+2wc) C's weighted average is 1028
+
+Finally, given the weighted average, which systems is the most desirable,
+A, B, or C?
+2g) Fastest is B
+
+3. Fill the answers to each question found in the questions file.  Report
+3 decimal places.  If an answer is infinity, then answer that.
+3a) Speedup is 1.905
+3b) The CPU would need to be infinity  times faster than the old CPU.
+3c) Highest possible speedup is 2.000
+
+4.  For each function call, report the estimated speedup.
+Report 4 digits only.
+4a) allocatemem speedup = 1.379
+4b) spawnproc = 1.233
+4c) authenticate = 1.136
+4d) ls = 1.110
+
+

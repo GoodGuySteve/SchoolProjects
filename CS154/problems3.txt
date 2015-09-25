@@ -1,0 +1,94 @@
+CS 154 - Cache Problems
+
+1Using the the series of addresses below, show the hits and misses 
+and final cache contents for a cache with the following configuration:
+Word size: 4 bytes
+Block size: 8 words
+Associativity: 4-way
+Total cache size: 512 bytes
+Replacement Policy: LRU
+
+Answer the following questions:
+How many bits are used for the byte offset?
+1a) 2 bits
+How many bits are used for the block offset?
+1b) 3 bits
+How many blocks fit in the cache?
+1c) 16 blocks
+How many sets are in the cache?
+1d) 4 sets
+How many bits are in the index?
+1e) 2 bits
+How many bits are in the tag?
+1f) 25 bits
+
+Given the following sequence of load addresses, report which ones are 
+misses.  For example, if the first and second are misses, the third is a 
+hit, and the rest are misses, the answer would be:
+MMHMMMMMMM
+
+TTTTTTTTTTTTTTTTTTTTTTTTTIIOOOOO
+00000 00 00000 M
+00000 00 00100 H
+00000 00 10000 H
+00000 01 00000 M
+00100 00 00000 M
+00010 00 00000 M
+01000 00 00000 M
+00000 00 00100 H
+01000 00 00100 H
+10000 00 00000 M
+00100 00 01000 M
+00000 00 10000 H
+
+0, 4, 16, 32, 512, 256, 1024, 4, 1028, 2048, 520, 16
+1g) MHHMMMMHHMMH  
+
+2.AMAT - Average Memory Access Time
+
+To capture the fact that the time to access data for both hits and 
+misses affects performance, designers often use average memory access 
+time (AMAT) as a way to examine alternative cache designs. 
+Average memory access time is the average time to access memory 
+considering both hits and misses and the frequency 
+of different access.  The unit is either expressed in cycles / access or 
+time / access, depending on what the problem gives you.
+The most basic equation is: AMAT = AccessTime + missrate*misspenalty.
+
+You want to look at the performance of two caches configurations by comparing 
+the AMATs of each one. The first is a single, large cache.
+This 2M cache, direct-mapped cache has an access time of 6 cycles and 
+hit rate of 99%.  Accessing DRAM requires 100 cycles.
+What is the AMAT of cache 1?
+2a) 7 cycles
+
+Now let's compare that to a 4-way set associative cache that has an 
+access time of 10 cycles and a hit rate of 99.5%.  
+What is the AMAT of cache 2?
+2b) 10.5 cycles
+
+
+Now we want to explore what happens if we create two caches - a small and
+fast one as a level 1 cache and a larger, slower one for the level 2 cache.
+The level 1 cache is a 256K cache with an access time of 2 cycle and 
+hit rate of 95% The second cache is a 1M cache with an 10 cycle access time 
+and a 65% hit rate.  Hint:  The miss penalty of the first cache is the 
+AMAT of the second cache.  The total AMAT of the system is the AMAT of the 
+level 1 cache (assuming the second cache is taken into account for its
+miss penalty). 
+What is the AMAT of this multi-level cache?
+2c) 4.25 cycles
+
+Question that will not be graded by the submit system - just a study 
+question for the exam:
+
+3. Cache C1 is direct-mapped with 16 one-word blocks.  Cache C2 is 
+direct-mapped with 4 four-word blocks. Assume that the miss penalty for C1 
+is 8 clock cycles and the miss penalty for C2 is 11 clock cycles.
+Assuming that the caches are initially empty, find a reference string for 
+which C2 has a lower miss rate but spends more cycles on 
+cache misses than C1.
+Use word addresses.
+
+word 0, word 4, word 8, word 1
+(4 misses for C1: 32 cycles, 3 misses for C2: 33 cycles)

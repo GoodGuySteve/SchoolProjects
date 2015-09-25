@@ -1,0 +1,12 @@
+
+Single Cycle Implementation
+
+Print out one of the SingleCycle Practice Sheets and draw on it for 
+this problem.
+
+Assume the following new instruction in the machine, stored in  
+R-format:  movn $s0, $s1, $s2.  The meaning is: if ($s2 != 0), $s0 = $s1.
+The fields are: rs = $s2, rt = $s1, rd = $s0.
+Using one of the practice sheets, draw the wires and any additional 
+hardware required to implement this instruction.  Choose a design that 
+adds the least amount of hardware.

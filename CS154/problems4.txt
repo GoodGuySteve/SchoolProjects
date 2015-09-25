@@ -1,0 +1,148 @@
+
+These short answer / vocabulary questions are on 
+caches, virtual memory, support for parallel
+programming, storage, and networks.
+
+Caches:
+The following vocabulary words are being used:
+direct-mapped
+set-associative
+fully associative
+associativity
+block size
+cache size
+LRU
+FIFO
+spatial locality
+temporal locality
+
+Replace the blank with the proper word.
+
+Many programs follow the principle that if an item has been
+used recently, its neighbors will likely be used soon.
+c1)  spatial locality
+
+Many programs follow the principle that if an item has been
+used recently, it will likely be used again soon.
+c2) temporal locality
+
+A cache configuration that has only one set.
+c3) fully associative
+
+A cache configuration in which only one tag is checked
+each access.
+c4) direct-mapped
+
+If you increase this, you increase the miss penalty.
+c5) block size
+
+If you increase this, you increase the access time and
+the hit time.  There are two answers - report them 
+in alphabetical order.
+c6) associativity and cache size
+
+Virtual memory:
+The vocabulary words for virtual memory are:
+operating system
+virtual address
+physical address
+DRAM
+TLB
+hard drive
+process page table
+TLB Miss 
+Page fault
+
+vm1) DRAM acts as a cache for the hard drive
+
+vm2) TLB acts as a cache for the process page table
+
+vm3) The physical address tells where a piece of data is located in DRAM.
+
+vm4) A TLB Miss is when a translation is not in the TLB.
+
+vm5) A Page fault is when a page is not located in DRAM.
+
+vm6) The operating system manages virtual memory
+
+vm7) The translation translates a virtual address to a physical address.
+
+Question not graded by submit system:
+How does virtual memory provide the following services:
+a) preventing one process from accessing memory in another's memory
+b) preventing an attacker from inserting code into the stack and executing it
+c) allowing two processes to share part, but not all, of their memory
+d) allowing the total memory allocation to exceed DRAM
+
+Support for parallel programming:
+
+Vocabulary words:
+false sharing
+atomic
+synchronization
+lock
+barrier
+
+This construct is used to make sure that all processors have 
+reached a certain point in the code before moving on.
+p1) barrier
+
+This occurs when different processors write to different data
+in the same cache line.
+p2) false sharing
+
+In order to implement locks or barriers, the architecture must
+provide a read/modify instruction that is
+p3) atomic
+
+Interconnect networks:
+You have four processors configured as a square.
+
+What is the total bandwidth for the network?
+n1) 4
+
+What is the bisection bandwidth for the network?
+n2) 2
+
+Now add two diagonals.
+
+What is the total bandwidth for the network?
+n3) 6
+
+What is the bisection bandwidth for the network?
+n4) 4
+
+Question not graded by the submit system:
+What is the purpose of the bisection bandwidth?
+
+Storage:
+Vocabulary words for this section:
+sectors
+cylinders
+availability
+reliability
+MTTF
+MTTR
+RAID
+
+Storage used to be incredibly costly because it was stored on a 
+single device that could never fail.  Now, that storage is spread
+across several devices, and they are organized to allow for failures
+without losing all of the data. What is this system called (acronym)?
+s1) RAID
+
+On hard disks, the data is stored in concentric circles.  Multiple read
+heads read the same concentric circle on multiple disks at the same time.
+What are these called?
+s2) cylinders
+
+Each concentric circle is divided into sections.  What are these
+sections called?
+s3) sectors
+
+The amount of time that a system is up and accepting requests is:
+s4) availability
+
+The amount of time between when a system is fixed or start and it 
+breaks in such a way that it is unusable is:
+s5) MTTF

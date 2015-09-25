@@ -1,0 +1,101 @@
+Lab 0 problems: Data representation and bitwise operations
+
+Remember to solve these individually, working with your partner only when
+you get stuck, and seeking help from the TA only when you are both stuck.
+You may NOT use any calculators.  Make sure you are on your own computer,
+editing your own file.
+
+This is your assignment for the week, not just for the day, so it is 
+expected that you will not finish during this lab time.  
+
+For each problem, make sure you write your answer exactly on the line with 
+the problem number (i.e. 1a) that follows the question.
+
+1. Convert the following decimal numbers into 8-bit binary with the 
+format 0b01001111:
+1a) 13 = 0b00001101
+1b) 9 = 0b00001001
+1c) 19 = 0b00010011
+
+2. Convert the following binary numbers into decimal:
+2a) 0101 = 5
+2b) 1101 = 13
+2c) 1011 = 11
+
+3.  Convert the following decimal numbers into 2-digit hexadecimal numbers.
+Report the answers in the format 0xff.  hello
+3a) 73 = 0x49
+3b) 23 = 0x17
+3c) 151 = 0x97
+
+4. Convert the following decimal numbers into 8-bit binary with the
+format 0b01001111.  They are stored in 2's complement representation.
+4a) -15 = 0b11110001
+4b) -6 = 0b11111010
+4c) -10 = 0b11110110
+
+5.  Fill in the following properties of binary numbers.  
+Remember to place the answer on the line with the problem number.  
+Do not capitalize your words.  If you want to express
+an exponent, use the '^'.  For example, the value 8 is 2 to the 3rd power.  
+Express this as 2^3.
+
+Each sentence has two blanks.  The first needs to be replaced by one of 
+the following operations:
+addition, subtraction, multiplication, division, modulus
+The second needs to be replaced by an integer (in exponent form).  
+Make sure you remove the underscore but retain the period.
+
+5a) Shifting the digits two to the left is the same as performing multiplication by 2^2.
+5b) Shifting the digits three to the right is the same as performing division by 2^3.
+5c) Performing a bitwise AND with the number 7 is the same as performing modulus by 2^3.
+
+6.  Complete each sentence.
+6a) If the bit in bit position 0 is a 1 (for an integer), the number is odd
+6b) If a number contains all 0's except a 1 in position n, the value is 2^n
+
+7.  
+If I have the number 0xxxxxxxyyyyzzzzz, and I want to extract the three
+numbers x, y, and z (the number of times you see them is the number of 
+bits for their representation), how do I do so?  In the above example, 
+x is 7 bits, y is 4 bits, and z is 5 bits.  x, y, and z are unsigned 
+integers.
+
+For each question, answer with the operator:
+bitwise and, bitwise or, bitwise not, bitwise xor, shift left, shift right
+For the mask or shift values, answer a mask in binary (16 bits in the 
+format 0b0100101101001000), and answer a shift value as an integer.
+Assume this is an unsigned int storing unsigned ints.
+
+What operator would convert 0bxxxxxxxyyyyzzzzz to 0b00000000000zzzzz?
+7a) bitwise and
+What would the mask value or number of shift bits be?
+7b) 0b0000000000011111
+What operator would convert 0bxxxxxxxyyyyzzzzz to 0b0000000yyyy00000?
+7c) bitwise and
+What would the mask value or number of shift bits be?
+7d) 0b0000000111100000
+What operator would convert 0bxxxxxxxyyyyzzzzz to 0bxxxxxxx000000000?
+7e) bitwise and
+What would the mask value or number of shift bits be?
+7f) 0b1111111000000000
+What operator would convert 0bxxxxxxx000000000 to 0b000000000xxxxxxx?
+7g) shift right
+What would the mask value or number of shift bits be?
+7h) 9
+
+8.  Translate the following instrutions into binary and express as a
+hexadecimal.  I have given you one as an example.  Translate these
+for the ORIGINAL MIPS machine, not the one for your project.
+
+ex.  add $1, $2, $3
+8ex) 0x00430820
+
+a. addi $5, $7, -13
+8a) 0x20e5fff3
+
+b.  lw $8, 64($4)
+8b) 0x8c880040
+
+c. jr $17
+8c) 0x02200008
