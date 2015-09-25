@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+    <Text Include="input1.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Input.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PowerStation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Algorithm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Input.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PowerStation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Algorithm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="inp101">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="out101">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="inp107">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="out107">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="inp102">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="inp104">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="inp105">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="inp106">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="inp108">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="inp301">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="inp307">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="inp302">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="inp303">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="inp304">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="inp305">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="inp306">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="inp308">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="inp201">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="inp207">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="inp208">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="inp206">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="inp204">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="inp401">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="inp407">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="inp408">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="inp406">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="inp405">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="inp402">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="inp403">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="inp404">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="inp60010">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="inp60040">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="inp60015">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="inp70010">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,42 @@
+
+Procedure tree takes some set with power configurations for that set.
+The output is a new, different arrangement of the set such that each member
+points to its parent in the set (root points to null). 
+
+
+
+Procedure tree_power takes a tree (an array of power stations, as output by tree).
+Function modifies each power station in the input array to have a power output equal
+to the power needed to reach its furthest child.
+
+
+Procedure ACSF()
+	set power = to 0 in all entries
+	create empty marked set and full unmarked set
+	add source to marked set
+	for each element j still in the unmarked set, sorted by shortest distance from source, then lowest index:
+		set the power of j to 0
+		mark j
+		initialize min power to something big (e.g. distance from source to j and i to source)
+		for each marked station l:
+			if l == j, skip iteration
+			try transmitting from station l to station j:
+				q is a copy of power array, with the exception that q[l] is at least large enough to reach j
+			generate a tree using this new copied array and the marked set only
+			find the power that the tree generates
+			if the power is lower than any so far, store the minimum total power along with index l
+		endfor
+		now we transmit from the best index we found
+		power[bestIndex] = max (current power, necessary power to transmit to j)
+		generate a tree using the modified power schedule
+			//tree is used to prune unnecessary transmissions
+		make the power schedule the power schedule generated according to the tree (for marked stations only)
+	endfor
+endFunction
+
+ACSet() is just like ACSF, except the sorting condition is different
+Modifications:
+	for each item in the marked set, keep track of its closest neighbor in the unmarked set (and the distance)
+	when an item is added to the marked set, find its closest neighbor, and refind for any that had the new item as
+	closest neighbor
+	sort according to those distances
