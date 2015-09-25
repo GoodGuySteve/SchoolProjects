@@ -1,0 +1,6 @@
+nat(z).
+{X} nat(s(X)) :- nat(X).
+{X} plus(z, X, X).
+{X, Y, Z} plus(s(X), y, s(Z)) :- plus(X, Y, Z).
+
+? {X, Y, Z} (plus(X, Z, Y)), (output).

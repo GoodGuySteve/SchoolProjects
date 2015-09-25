@@ -1,0 +1,5 @@
+iseven(z).
+{X} iseven(s(X)) :- isodd(X).
+{X} isodd(s(X)) :- iseven(X).
+
+? {X} iseven(s(z)), iseven(X), output.

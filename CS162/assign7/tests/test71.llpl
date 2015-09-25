@@ -1,0 +1,3 @@
+has(cake) :- has(money).
+
+? has(money) -o !(has(cake)).

@@ -1,0 +1,1 @@
+? {X, Y, Z} ({X} foo(X) -o (foo(X);foo(Y);foo(Z))).

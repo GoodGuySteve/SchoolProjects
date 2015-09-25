@@ -1,0 +1,1 @@
+? {X, Y} !((pfoo(8) -o (pfoo(X))) + (&(pfoo(9)) -o (pfoo(Y)))).

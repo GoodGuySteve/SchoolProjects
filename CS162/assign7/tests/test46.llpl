@@ -1,0 +1,6 @@
+{X} a(X) :- foo(X).
+{X} a(X) :- bar(X).
+{Y} b(Y) :- foo(Y).
+{Y} b(Y) :- bar(Y).
+
+? {X} (foo(5) -o bar(5) -o a(X), b(X)).

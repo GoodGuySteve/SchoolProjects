@@ -1,0 +1,6 @@
+-- should fail
+
+bar.
+baz :- foo -o (bar + foo).
+
+? baz.

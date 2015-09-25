@@ -1,0 +1,4 @@
+has(cake) :- has(money).
+has(pizza) :- has(money).
+
+? {X, Y} (has(money) -o has(money) -o has(X), has(Y)).

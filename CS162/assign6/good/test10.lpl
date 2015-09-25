@@ -1,0 +1,4 @@
+{X} plus(z, X, X).
+{X,Y,Z} plus(s(X), Y, s(Z)) :- plus(X, Y, Z).
+
+? {X,Y} plus(s(s(X)), s(Y), s(s(s(s(z))))), output.

@@ -1,0 +1,10 @@
+-- concrete syntax example 2:
+
+testedout(alice, 16).
+taken(alice, 24).
+{Student} ready(Student, 138) :-
+    (taken(Student, 16) ; testedout(Student, 16)),
+    (taken(Student, 24) ; testedout(Student, 24)),
+    (taken(Student, 40) ; testedout(Student, 40)).
+
+? taken(alice, 42) => ({Class} ready(alice, Class), output).

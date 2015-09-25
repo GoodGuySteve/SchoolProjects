@@ -1,0 +1,596 @@
+Warming Up
+==========
+
+Linear Tests
+============
+
+running test1.llpl:
+true
+========
+
+running test11.llpl:
+true
+========
+true
+========
+true
+========
+true
+========
+true
+========
+true
+========
+true
+========
+true
+========
+true
+========
+true
+========
+
+running test15.llpl:
+X ↦ x
+Y ↦ L2
+Z ↦ L3
+========
+X ↦ L1
+Y ↦ y
+Z ↦ L3
+========
+X ↦ L1
+Y ↦ L2
+Z ↦ z
+========
+
+running test18.llpl:
+X ↦ L1
+========
+
+running test21.llpl:
+X ↦ cake
+========
+
+running test23.llpl:
+
+running test24.llpl:
+X ↦ cake
+========
+X ↦ money
+========
+
+running test26.llpl:
+true
+========
+
+running test3.llpl:
+true
+========
+true
+========
+
+running test30.llpl:
+
+running test32.llpl:
+true
+========
+
+running test35.llpl:
+true
+========
+true
+========
+
+running test38.llpl:
+true
+========
+
+running test4.llpl:
+
+running test42.llpl:
+true
+========
+true
+========
+true
+========
+true
+========
+
+running test45.llpl:
+X ↦ 8
+Y ↦ 9
+========
+
+running test46.llpl:
+X ↦ 5
+========
+X ↦ 5
+========
+
+running test50.llpl:
+
+running test53.llpl:
+true
+========
+
+running test56.llpl:
+true
+========
+true
+========
+true
+========
+true
+========
+true
+========
+true
+========
+true
+========
+true
+========
+true
+========
+true
+========
+
+running test6.llpl:
+true
+========
+
+running test60.llpl:
+true
+========
+
+running test66.llpl:
+X ↦ a
+========
+
+running test70.llpl:
+true
+========
+
+running test71.llpl:
+
+running test72.llpl:
+true
+========
+
+running test73.llpl:
+
+running test74.llpl:
+X ↦ money
+Y ↦ money
+========
+X ↦ money
+Y ↦ cake
+========
+X ↦ money
+Y ↦ pizza
+========
+X ↦ money
+Y ↦ money
+========
+X ↦ money
+Y ↦ cake
+========
+X ↦ money
+Y ↦ pizza
+========
+X ↦ cake
+Y ↦ money
+========
+X ↦ cake
+Y ↦ cake
+========
+X ↦ cake
+Y ↦ pizza
+========
+X ↦ cake
+Y ↦ money
+========
+
+running test75.llpl:
+X ↦ money
+========
+X ↦ money
+========
+X ↦ cake
+========
+X ↦ cake
+========
+X ↦ pizza
+========
+X ↦ pizza
+========
+
+running test8.llpl:
+true
+========
+true
+========
+
+
+Nonlinear Tests (From Last Project)
+===================================
+
+running append0.llpl:
+X ↦ nil
+========
+
+running append126.llpl:
+Y ↦ L1
+Z ↦ L2
+========
+Y ↦ L1
+Z ↦ L2
+========
+
+running append13.llpl:
+W ↦ L3
+X ↦ nil
+Y ↦ L3
+========
+W ↦ L8
+X ↦ cons(L5, nil)
+Y ↦ cons(L5, L8)
+========
+W ↦ L13
+X ↦ cons(L5, cons(L10, nil))
+Y ↦ cons(L5, cons(L10, L13))
+========
+W ↦ L18
+X ↦ cons(L5, cons(L10, cons(L15, nil)))
+Y ↦ cons(L5, cons(L10, cons(L15, L18)))
+========
+W ↦ L23
+X ↦ cons(L5, cons(L10, cons(L15, cons(L20, nil))))
+Y ↦ cons(L5, cons(L10, cons(L15, cons(L20, L23))))
+========
+W ↦ L28
+X ↦ cons(L5, cons(L10, cons(L15, cons(L20, cons(L25, nil)))))
+Y ↦ cons(L5, cons(L10, cons(L15, cons(L20, cons(L25, L28)))))
+========
+W ↦ L33
+X ↦ cons(L5, cons(L10, cons(L15, cons(L20, cons(L25, cons(L30, nil))))))
+Y ↦ cons(L5, cons(L10, cons(L15, cons(L20, cons(L25, cons(L30, L33))))))
+========
+W ↦ L38
+X ↦ cons(L5, cons(L10, cons(L15, cons(L20, cons(L25, cons(L30, cons(L35, nil)))))))
+Y ↦ cons(L5, cons(L10, cons(L15, cons(L20, cons(L25, cons(L30, cons(L35, L38)))))))
+========
+W ↦ L43
+X ↦ cons(L5, cons(L10, cons(L15, cons(L20, cons(L25, cons(L30, cons(L35, cons(L40, nil))))))))
+Y ↦ cons(L5, cons(L10, cons(L15, cons(L20, cons(L25, cons(L30, cons(L35, cons(L40, L43))))))))
+========
+W ↦ L48
+X ↦ cons(L5, cons(L10, cons(L15, cons(L20, cons(L25, cons(L30, cons(L35, cons(L40, cons(L45, nil)))))))))
+Y ↦ cons(L5, cons(L10, cons(L15, cons(L20, cons(L25, cons(L30, cons(L35, cons(L40, cons(L45, L48)))))))))
+========
+
+running append143.llpl:
+W ↦ L1
+Y ↦ L2
+========
+W ↦ L1
+Y ↦ L2
+========
+
+running append191.llpl:
+W ↦ L1
+========
+
+running append2.llpl:
+X ↦ nil
+Z ↦ nil
+========
+X ↦ cons(L4, nil)
+Z ↦ cons(L4, cons(L4, nil))
+========
+X ↦ cons(L4, cons(L9, nil))
+Z ↦ cons(L4, cons(L9, cons(L4, cons(L9, nil))))
+========
+X ↦ cons(L4, cons(L9, cons(L14, nil)))
+Z ↦ cons(L4, cons(L9, cons(L14, cons(L4, cons(L9, cons(L14, nil))))))
+========
+X ↦ cons(L4, cons(L9, cons(L14, cons(L19, nil))))
+Z ↦ cons(L4, cons(L9, cons(L14, cons(L19, cons(L4, cons(L9, cons(L14, cons(L19, nil))))))))
+========
+X ↦ cons(L4, cons(L9, cons(L14, cons(L19, cons(L24, nil)))))
+Z ↦ cons(L4, cons(L9, cons(L14, cons(L19, cons(L24, cons(L4, cons(L9, cons(L14, cons(L19, cons(L24, nil))))))))))
+========
+X ↦ cons(L4, cons(L9, cons(L14, cons(L19, cons(L24, cons(L29, nil))))))
+Z ↦ cons(L4, cons(L9, cons(L14, cons(L19, cons(L24, cons(L29, cons(L4, cons(L9, cons(L14, cons(L19, cons(L24, cons(L29, nil))))))))))))
+========
+X ↦ cons(L4, cons(L9, cons(L14, cons(L19, cons(L24, cons(L29, cons(L34, nil)))))))
+Z ↦ cons(L4, cons(L9, cons(L14, cons(L19, cons(L24, cons(L29, cons(L34, cons(L4, cons(L9, cons(L14, cons(L19, cons(L24, cons(L29, cons(L34, nil))))))))))))))
+========
+X ↦ cons(L4, cons(L9, cons(L14, cons(L19, cons(L24, cons(L29, cons(L34, cons(L39, nil))))))))
+Z ↦ cons(L4, cons(L9, cons(L14, cons(L19, cons(L24, cons(L29, cons(L34, cons(L39, cons(L4, cons(L9, cons(L14, cons(L19, cons(L24, cons(L29, cons(L34, cons(L39, nil))))))))))))))))
+========
+X ↦ cons(L4, cons(L9, cons(L14, cons(L19, cons(L24, cons(L29, cons(L34, cons(L39, cons(L44, nil)))))))))
+Z ↦ cons(L4, cons(L9, cons(L14, cons(L19, cons(L24, cons(L29, cons(L34, cons(L39, cons(L44, cons(L4, cons(L9, cons(L14, cons(L19, cons(L24, cons(L29, cons(L34, cons(L39, cons(L44, nil))))))))))))))))))
+========
+
+running append216.llpl:
+X ↦ L1
+========
+
+running append236.llpl:
+X ↦ L1
+========
+X ↦ L1
+========
+
+running append95.llpl:
+X ↦ L1
+Y ↦ L2
+========
+X ↦ L1
+Y ↦ L2
+========
+
+running natplus0.llpl:
+X ↦ z
+========
+
+running natplus1.llpl:
+X ↦ z
+Y ↦ z
+========
+
+running natplus141.llpl:
+X ↦ L1
+Y ↦ z
+========
+X ↦ L1
+Y ↦ s(z)
+========
+X ↦ L1
+Y ↦ s(s(z))
+========
+X ↦ L1
+Y ↦ s(s(s(z)))
+========
+X ↦ L1
+Y ↦ s(s(s(s(z))))
+========
+X ↦ L1
+Y ↦ s(s(s(s(s(z)))))
+========
+X ↦ L1
+Y ↦ s(s(s(s(s(s(z))))))
+========
+X ↦ L1
+Y ↦ s(s(s(s(s(s(s(z)))))))
+========
+X ↦ L1
+Y ↦ s(s(s(s(s(s(s(s(z))))))))
+========
+X ↦ L1
+Y ↦ s(s(s(s(s(s(s(s(s(z)))))))))
+========
+
+running natplus240.llpl:
+X ↦ L1
+Z ↦ L2
+========
+X ↦ L1
+Z ↦ L2
+========
+
+running natplus33.llpl:
+Y ↦ z
+========
+Y ↦ s(z)
+========
+Y ↦ s(s(z))
+========
+Y ↦ s(s(s(z)))
+========
+Y ↦ s(s(s(s(z))))
+========
+Y ↦ s(s(s(s(s(z)))))
+========
+Y ↦ s(s(s(s(s(s(z))))))
+========
+Y ↦ s(s(s(s(s(s(s(z)))))))
+========
+Y ↦ s(s(s(s(s(s(s(s(z))))))))
+========
+Y ↦ s(s(s(s(s(s(s(s(s(z)))))))))
+========
+
+running natplus57.llpl:
+Z ↦ L1
+========
+Z ↦ z
+========
+Z ↦ s(L3)
+========
+Z ↦ s(z)
+========
+Z ↦ s(s(L5))
+========
+Z ↦ s(s(z))
+========
+Z ↦ s(s(s(L7)))
+========
+Z ↦ s(s(s(z)))
+========
+Z ↦ s(s(s(s(L9))))
+========
+Z ↦ s(s(s(s(z))))
+========
+
+running natplus7.llpl:
+X ↦ z
+Y ↦ L2
+Z ↦ L2
+========
+X ↦ s(z)
+Y ↦ s(L8)
+Z ↦ y
+========
+X ↦ s(s(z))
+Y ↦ s(s(L13))
+Z ↦ y
+========
+X ↦ s(s(s(z)))
+Y ↦ s(s(s(L18)))
+Z ↦ y
+========
+X ↦ s(s(s(s(z))))
+Y ↦ s(s(s(s(L23))))
+Z ↦ y
+========
+X ↦ s(s(s(s(s(z)))))
+Y ↦ s(s(s(s(s(L28)))))
+Z ↦ y
+========
+X ↦ s(s(s(s(s(s(z))))))
+Y ↦ s(s(s(s(s(s(L33))))))
+Z ↦ y
+========
+X ↦ s(s(s(s(s(s(s(z)))))))
+Y ↦ s(s(s(s(s(s(s(L38)))))))
+Z ↦ y
+========
+X ↦ s(s(s(s(s(s(s(s(z))))))))
+Y ↦ s(s(s(s(s(s(s(s(L43))))))))
+Z ↦ y
+========
+X ↦ s(s(s(s(s(s(s(s(s(z)))))))))
+Y ↦ s(s(s(s(s(s(s(s(s(L48)))))))))
+Z ↦ y
+========
+
+running test1.llpl:
+X ↦ s(z)
+Y ↦ z
+========
+X ↦ s(z)
+Y ↦ s(s(z))
+========
+X ↦ s(z)
+Y ↦ s(s(s(s(z))))
+========
+X ↦ s(z)
+Y ↦ s(s(s(s(s(s(z))))))
+========
+X ↦ s(z)
+Y ↦ s(s(s(s(s(s(s(s(z))))))))
+========
+X ↦ s(z)
+Y ↦ s(s(s(s(s(s(s(s(s(s(z))))))))))
+========
+X ↦ s(z)
+Y ↦ s(s(s(s(s(s(s(s(s(s(s(s(z))))))))))))
+========
+X ↦ s(z)
+Y ↦ s(s(s(s(s(s(s(s(s(s(s(s(s(s(z))))))))))))))
+========
+X ↦ s(z)
+Y ↦ s(s(s(s(s(s(s(s(s(s(s(s(s(s(s(s(z))))))))))))))))
+========
+X ↦ s(z)
+Y ↦ s(s(s(s(s(s(s(s(s(s(s(s(s(s(s(s(s(s(z))))))))))))))))))
+========
+
+running test10.llpl:
+X ↦ z
+Y ↦ s(z)
+========
+X ↦ s(z)
+Y ↦ z
+========
+
+running test11.llpl:
+X ↦ L1
+Y ↦ L2
+Z ↦ L3
+========
+X ↦ L1
+Y ↦ L2
+Z ↦ L3
+========
+X ↦ L1
+Y ↦ L2
+Z ↦ L3
+========
+
+running test2.llpl:
+Class ↦ 138
+========
+
+running test3.llpl:
+X ↦ z
+========
+X ↦ s(s(z))
+========
+X ↦ s(s(s(s(z))))
+========
+X ↦ s(s(s(s(s(s(z))))))
+========
+X ↦ s(s(s(s(s(s(s(s(z))))))))
+========
+X ↦ s(s(s(s(s(s(s(s(s(s(z))))))))))
+========
+X ↦ s(s(s(s(s(s(s(s(s(s(s(s(z))))))))))))
+========
+X ↦ s(s(s(s(s(s(s(s(s(s(s(s(s(s(z))))))))))))))
+========
+X ↦ s(s(s(s(s(s(s(s(s(s(s(s(s(s(s(s(z))))))))))))))))
+========
+X ↦ s(s(s(s(s(s(s(s(s(s(s(s(s(s(s(s(s(s(z))))))))))))))))))
+========
+
+running test4.llpl:
+X ↦ z
+Y ↦ s(s(s(s(z))))
+========
+X ↦ s(z)
+Y ↦ s(s(s(z)))
+========
+X ↦ s(s(z))
+Y ↦ s(s(z))
+========
+X ↦ s(s(s(z)))
+Y ↦ s(z)
+========
+X ↦ s(s(s(s(z))))
+Y ↦ z
+========
+
+running test5.llpl:
+Y ↦ 42
+========
+
+running test6.llpl:
+Y ↦ a
+========
+
+running test7.llpl:
+Y ↦ a
+========
+
+running test8.llpl:
+X ↦ cons(1, cons(2, cons(3, cons(4, nil))))
+========
+
+running test9.llpl:
+X ↦ z
+Y ↦ s(s(s(z)))
+========
+X ↦ s(z)
+Y ↦ s(s(z))
+========
+X ↦ s(s(z))
+Y ↦ s(z)
+========
+X ↦ s(s(s(z)))
+Y ↦ z
+========

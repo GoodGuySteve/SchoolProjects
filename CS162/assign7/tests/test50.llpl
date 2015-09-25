@@ -1,0 +1,6 @@
+-- should fail
+
+bar.
+{X} baz :- foo -o (bar(X) + foo).
+
+? baz(5).

@@ -1,0 +1,13 @@
+-- concrete syntax example 1:
+
+{X} eq(X, X).
+iseven(z).
+{X} iseven(s(X)) :- isodd(X).
+{X} isodd(s(X)) :- iseven(X).
+parity(nil, nil).
+{W,X,Y,Z} parity(cons(X, Y), cons(W, Z)) :-
+    eq(W, even), iseven(X), parity(Y, Z).
+{W,X,Y,Z} parity(cons(X, Y), cons(W, Z)) :-
+    eq(W, odd), isodd(X), parity(Y, Z).
+
+? {X,Y} parity(cons(z, cons(z, nil)), cons(odd, cons(even, nil))), output.

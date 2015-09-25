@@ -1,0 +1,4 @@
+{X} append(nil, X, X).
+{X, Y, Z, W} append(cons(X, Y), Z, cons(X, W)) :- append(Y, Z, W).
+
+? {W, Y} ({Z} append(Z) => ((append(W)); (append(Y)))), (output).

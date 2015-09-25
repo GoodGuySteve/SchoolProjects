@@ -1,0 +1,1 @@
+? ({X} foo(X) :- bar(X)) => ({X} bar(X) :- baz(X) => cat(X)) => cat(a) => ({Y} foo(Y), output).

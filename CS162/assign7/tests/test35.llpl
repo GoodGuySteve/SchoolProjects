@@ -1,0 +1,5 @@
+bar.
+baz :- foo -o (((!bar), (!foo), foo) ; foo).
+foo :- bar.
+
+? baz.

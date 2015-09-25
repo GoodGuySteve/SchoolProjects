@@ -1,0 +1,4 @@
+{X} append(nil, X, X).
+{X, Y, Z, W} append(cons(X, Y), Z, cons(X, W)) :- append(Y, Z, W).
+
+? {X} append(cons(1, cons(2, nil)), cons(3, cons(4, nil)), X).

@@ -1,0 +1,1 @@
+? {Y} (({X} foo(X) :- bar(X)) => bar(a) => (foo(Y))).

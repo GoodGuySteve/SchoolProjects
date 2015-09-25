@@ -1,0 +1,1 @@
+? {X, Y} (has(cake) -o (has(X), (has(X) + has(Y)))).
