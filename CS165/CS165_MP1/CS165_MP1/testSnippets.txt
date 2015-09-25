@@ -1,0 +1,42 @@
+
+
+//TEST 1 FOR THE BOARD CLASS
+Board* board = new Board(3);
+board->addQueen(0, 0);
+board->addQueen(0, 1);
+board->addQueen(1, 2);
+int test = board->getConflictTotal();
+
+board->stepCount = 4;
+
+frontierSet.push(board);
+
+Board* board2 = new Board(3);
+board2->addQueen(0, 0);
+board2->addQueen(1, 1);
+board2->addQueen(2, 2);
+int test2 = board2->getConflictTotal();
+board2->stepCount += board2->swapQueens(0, 2);
+test2 = board2->getConflictTotal();
+
+frontierSet.push(board2);
+
+Board* testy = frontierSet.top();
+
+
+//TEST 2 FOR BOARD CLASS - 0 CONFLICTS
+	Board* board = new Board(4);
+	board->addQueen(1, 0);
+	board->addQueen(3, 1);
+	board->addQueen(0, 2);
+	board->addQueen(2, 3);
+	int test = board->getConflictTotal();
+
+
+	bool Board::movePiece(int y, int dir) {
+	if (-dir == queenArray[y].direction) return false;
+	if (queenArray[y].row + dir >= n || queenArray[y].row + dir < 0) return false;
+	queenArray[y].direction = dir;
+	queenArray[y].row += dir;
+	return true;
+}
